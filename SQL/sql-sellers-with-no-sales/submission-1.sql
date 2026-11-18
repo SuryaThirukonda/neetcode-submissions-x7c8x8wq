@@ -1,0 +1,8 @@
+-- Write your query below
+SELECT DISTINCT s.seller_name
+FROM seller s
+LEFT JOIN orders o
+ON s.seller_id = o.seller_id
+AND o.sale_date BETWEEN '2020-01-01' and '2020-12-31'
+WHERE o.order_id IS NULL
+
